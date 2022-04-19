@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.1.3/css/bootstrap.css">
+    <title>Javascript - Les types</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- ======================================== Titre de la page ======================================= -->
+        <div class="row">
+            <div class="col-12 col-md-12 text-center text-danger mt-3 p-3">
+                <h1> Javascript - Les différents types de données </h1>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <!-- ======================================== Contenu principal ======================================= -->
+
+        <div class="row mt-5 p-3 d-flex justify-content-center bg-light border">
+            <div class="col-12 col-md-12">
+                <h2>1/ Les trois types primitif principaux en JS</h2>
+                <ol>
+                    <li><a href=""><span class="surligner">String</span></a> ou chaine de caractères</li>
+                    <li><a href=""><span class="surligner">Number</span></a> ou nombre</li>
+                    <li><a href=""><span class="surligner">Boolean</span></a> ou booléen</li>
+                </ol>
+                <p>Pour connaitre les types de données on utilise la fonction <code>typeof()</code></p>
+            </div>
+            <!-- Fin col -->
+
+            <hr>
+            <div class="col-12 col-md-12">
+                <h4>String</h4>
+                <p id="p1">ce contenu sera remplacé</p>
+                <p>
+                    Les chaînes de caractères (chaînes, ou strings, en anglais) sont la façon d'enregistrer du texte dans des variables JavaScript. On peut enregistrer dans une variable de type string n'importe quelle chaîne de caractères, allant d'une seule lettre à un très grand nombre de lettres (plus de 134 millions, même dans des navigateurs anciens).
+                    <br>
+                    Les variables de type string sont encadrées par des guillemets simples <code>'...'</code> ou doubles <code>"..."</code> :
+                    <br>
+                    Exemple : <code>let lastName = 'Alexander';</code> / <code>let firstName = "Will";</code>
+                    <br>
+                </p>
+                <p>
+                    En javascript, on va pouvoir utiliser indifféremment des guillemets doubles ou des quotes pour entourer une chaîne de caractères et ces deux méthodes vont être strictement équivalentes à la différence d’autres langages comme le PHP par exemple.
+                    <br>
+                    <span class="fw-bold">Faites attention cependant à un point : 
+                        <br>
+                        si votre chaîne contient un caractère qui est le même que le délimiteur de chaîne choisi, il faudra neutraliser ce caractère en l’échappant au moyen d’un antislash ou changer de délimiteur.
+                    </span>
+                </p>
+                <p>
+                    Les chaînes peuvent aussi être concaténées (ajoutées à la fin l'une de l'autre) par l'opérateur + :
+                    <br>
+                    Exemple : 
+                    <br>
+                    <code>let wholeName = firstName + " " + lastName;</code> //valeur: "Will Alexander".
+                </p>
+                <p>
+                    Il est possible depuis quelques années d’utiliser une nouvelle écriture qui simplifie la concaténation des variables et des chaînes de caractère : la string interpolation.
+                    <br>
+                    Pour créer une string interpolation on écrit du texte encadrée par le signe <code>`</code> et si on veut injecter une variable dans ce code on utilise l’expression <code>${maVariable}</code>.
+                    <br>
+                    Exemple :
+                    <br>
+                    <code>const myName = `Alexander`;</code> 
+                    <br>
+                    <code>const salutation = `Bienvenue sur mon site ${myName}!`;</code>
+                    <br>
+                    <code>console.log(salutation);</code> //retournera “Bienvenue sur mon site Alexander!”
+                </p>
+            </div>
+            <!-- Fin col -->
+
+            <hr>
+            <div class="col-12 col-md-12">
+                <h4>Number</h4>
+                <p id="p2"></p>
+                <p>
+                    Les variables en javascript vont également pouvoir stocker des nombres. Des nombres entiers (1, 2, 3, etc.) positifs ou négatifs ou à virgule, décimaux (1,4 ; 67,34 ; etc.).
+                    <br>
+                    En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point.
+                    <br>
+                    Exemple : 
+                    <br>
+                    <code>let integerCalculation = 1 + 2;</code> // donne 3
+                    <br>
+                    <code>let weirdCalculation = 0.1 + 0.2;</code> // on attend 0.3, réponse réelle 0.30000000000000004
+                </p>
+                <p>
+                    Chaque fois que c'est possible, utilisez plutôt des calculs entiers (pour le calcul de prix, vous pouvez par exemple calculer en centimes, et non pas en euros ou en dollars).
+                </p>
+            </div>
+            <!-- Fin col -->
+
+            <hr>
+            <div class="col-12 col-md-12">
+                <h4>Boolean</h4>
+                <p>Ce type de données sera utile pour verifier si un test est vrai ou faux.</p>
+                <p>
+                    Un booléen, en algèbre est une valeur binaire (soit 0, soit 1).
+                    <br>
+                    En informatique, les valeurs logiques (booleans) sont le plus simple des types primitifs : le type booléen est un type qui ne contient que deux valeurs : true (vrai) et fasle (faux).
+                    <br>
+                    Elles s'utilisent dans toutes sortes de cas : pour indiquer si un utilisateur est connecté ou non, si une case est cochée ou non, ou si un ensemble de conditions particulières est réuni.
+                    <br>
+                    Exemple : <code>let userIsSignedIn = true;</code> / <code>let userIsAdmin = false;</code>
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row p-3 d-flex justify-content-center bg-warning">
+            <h2 class="text-center fw-bold mb-3">Conclusion</h2>
+            <div class="col-12 col-md-12">
+                <p>Dans ce chapitre, on a vu les trois principaux types de données primitifs en JavaScript :</p>
+                <ul>
+                    <li>string (chaîne de caractères) ;</li>
+                    <li>number (nombre) ;</li>
+                    <li>boolean (valeur logique) ;</li>
+                </ul>
+                <p>
+                    Dans le chapitre suivant, nous verrons un type très utile : les objets. Techniquement, il y a trois autres types de données primitifs dans JavaScript : null , undefined et symbol.
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+        <div class="row p-3 d-flex justify-content-center bg-warning">
+            <div class="col-12 col-md-4">
+                <h4 class="text-center">Null</h4>
+                <p>Null est un type un peu particulier : <code>null</code> = absence de valeur non saisie</p>
+                <p id="p5"></p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-4">
+                <h4 class="text-center">Undefined</h4>
+                <p>Si on déclare une variable sans lui attribuer de valeur, alors son type sera <code>undefined</code></p>
+                <p id="p6"></p>
+            </div>
+            <!-- Fin col -->
+            <div class="col-12 col-md-4">
+                <h4 class="text-center">Symbol</h4>
+                <p>
+                    Voir docs <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol" target="_blank">MDN</a>
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container-fluid -->
+
+    <!-- ======================================== Mes fichiers scripts ======================================= -->
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.1.3/js/bootstrap.js"></script>
+
+    <!-- Fichier script JS en externe -->
+    <script src="js/2_types_de_donnees.js"></script>
+</body>
+</html>
