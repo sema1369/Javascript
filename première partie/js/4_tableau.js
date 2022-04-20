@@ -1,0 +1,1 @@
+// FICHIER JS EXTERNE - TABLEAU (array) - SEMA

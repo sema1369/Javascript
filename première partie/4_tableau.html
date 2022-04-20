@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.1.3/css/bootstrap.css">
+    <title>JavaScript - Tableau (array)</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- ======================================== Titre de la page ======================================= -->
+        <div class="row">
+            <div class="col-12 col-md-12 text-center text-danger mt-3 p-3">
+                <h1>Javascript - Les différents types de données</h1>
+                <p class="lead">Tableau (array)</p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+        <hr>
+
+        <div class="row">
+            <div class="col-12 col-md-12 mt-3 p-3">
+                <h4>1) Utilisez un tableau pour enregistrer une liste ordonnée d'éléments</h4>
+                <p>Pour créer un tableau vide et l'enregistrer dans une variable, utilisez une paire de crochets : <code>let guests = [];</code></p>
+                <p>
+                    Vous pouvez aussi créer un tableau rempli en plaçant les éléments voulus à l'intérieur de ces crochets : 
+                    <code>let guests = ["Sarah Kate", "Audrey Simon", "Will Alexander"];</code>
+                </p>
+                <p>
+                    Vous pouvez ensuite accéder aux éléments de ce tableau par leur indice : 
+                    <span class="bg-warning">N'oubliez pas de démarrer à l'indice  0  !</span>
+                    <br> 
+                    <code>
+                        let firstGuest = guests[0]; // "Sarah Kate"
+                        <br>
+                        let thirdGuest = guests[2]; // "Will Alexander"
+                        <br>
+                        let undefinedGuest = guests[12] // undefined
+                    </code>
+                </p>              
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-12 mt-3 p-3">
+                <h4>2) Utilisez des valeurs plutôt que des références</h4>
+                <p>
+                    En JavaScript, les types primitifs tels que les nombres, les valeurs logiques et les chaînes sont passés par valeur. Ceci signifie que quand vous faites quelque chose comme :
+                    <br> 
+                    <code>
+                        let numberOfGuests = 20;
+                        let totalNumberOfGuests = numberOfGuests; // 20
+                    </code>
+                    <br>
+                    C'est la valeur 20 qui est copiée dans la nouvelle variable (totalNumberOfGuests), et aucun lien n'est maintenu entre les deux variables. Ce n'est pas le cas avec les objets et tableaux, qui sont passés par référence. Si vous n'y prenez pas garde, cela peut conduire à des comportements inattendus. 
+                    <br>
+                    Par exemple :
+                    <br> 
+                    <code>
+                        let artistProfile = {
+                        <br>
+                        name: "Tao Perkington",
+                        <br>
+                        age: 27,
+                        <br>
+                        available: true
+                        <br>
+                        };
+                    </code>
+                    <code>let allProfiles = [artistProfile];</code> // nouveau tableau contenant l'objet ci-dessus
+                    <br>
+                    <code>artistProfile.available = false;</code> // modification de l'objet
+                    <br>
+                    <code>console.log(allProfiles)</code> // affiche { nom: "Tao Perkington", âge: 27, disponible: false }
+                </p>
+                <p>
+                    Bien que nous ayons créé le tableau et passé l'objet avant la modification de cet objet, vous la voyez dans le tableau. C'est parce que quand on utilise des tableaux et des objets, on passe des références aux objets plutôt que la valeur des données qu'ils contiennent. Les variablesartistProfileet  allProfiles présentées ci-dessus contiennent des références à l'objet et au tableau en mémoire
+                </p>             
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-12 mt-3 p-3">
+                <h4>3) Travaillez sur les tableaux</h4>
+                <h5>a. Le comptage d'éléments</h5>
+                <p>
+                    La propriété length d'un tableau indique le nombre d'éléments qu'il contient :
+                    <br> 
+                    <code>let guests = ["Will Alexander", "Sarah Kate", "Audrey Simon"];</code>
+                    <code>let howManyGuests = guests.length;</code>// 3
+                    <br>
+                    Utilisez la notation dot pour accéder à la propriété length de votre tableau. Ce n'est peut-être pas très utile dans cet exemple (parce que nous savons combien nous avons mis d'invités dans le tableau !), mais dans beaucoup de cas, vous ne saurez pas à l'avance combien il y a d'éléments dans un tableau.
+                </p>
+                <h5>b. L'ajout et la suppression d'éléments</h5>
+                <p>
+                    Pour ajouter un élément à la fin d'un tableau, utilisez sa méthode push :
+                    <br> 
+                    <code>guests.push("Tao Perkington");</code>// ajoute "Tao Perkington" à la fin de notre tableau guests
+                    <br>
+                    Vous pouvez utiliser la notation dot pour accéder à la méthode push du tableau, et placer l'élément à ajouter entre parenthèses.
+                    Pour ajouter votre élément au début du tableau plutôt qu'à la fin, utilisez la méthode unshift :
+                    <br>
+                    <code>guests.unshift("Tao Perkington");</code> // "Tao Perkington" est ajouté au début du tableau guests
+                    <br>
+                    Pour supprimer le dernier élément d'un tableau, appelez sa méthode pop , sans passer aucun argument :
+                    <code>guests.pop();</code> // supprimer le dernier élément du tableau            
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row p-3 d-flex justify-content-center bg-warning">
+            <h2 class="text-center fw-bold mb-3">Conclusion</h2>
+            <div class="col-12 col-md-12">
+                <p>Dans ce chapitre, on a :</p>
+                <ul>
+                    <li>appris les collections</li>
+                    <li>vu la collection la plus courante en JavaScript : le tableau</li>
+                    <li>appris à créer des tableaux, à les remplir, et vu certains outils de base pour les manipuler.</li>
+                </ul>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+
+    <!-- =================================== Mes fichiers scripts ===================================== -->
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.1.3/js/bootstrap.js"></script>
+
+    <!-- Fichier script JS en externe -->
+    <script src="js/4_tableau.js"></script>
+</body>
+</html>
