@@ -352,22 +352,130 @@
                 </p>
             </div>
             <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
 
+        <section class="row mt-4">
+            <h2>6/ Instruction switch</h2>
             <div class="col-12 col-md-12">
-                 
-            </div>
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-12">
-                
-            </div>
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-12 ">
-                
+                <p>
+                    Et si vous souhaitez vérifier la valeur d'une variable par rapport à une liste de valeurs attendues, et réagir en conséquence ? Pour cela, vous pouvez utiliser l'instruction   switch :
+                    <br>
+                    Supposons que vous ayez quelques objets utilisateurs. Vous souhaitez vérifier quel type de compte a chacun, pour envoyer un message personnalisé :
+                </p>
+                <p>
+                    <code>
+                        let firstUser = {
+                            name: "Will Alexander",
+                            age: 33,
+                            accountLevel: "normal"
+                        };
+                        <br>
+                        
+                        let secondUser = {
+                            name: "Sarah Kate",
+                            age: 21,
+                            accountLevel: "premium"
+                        };
+                        <br>
+                        
+                        let thirdUser = {
+                            name: "Audrey Simon",
+                            age: 27,
+                            accountLevel: "mega-premium"
+                        };
+                    </code>
+                </p>
+                <p>
+                    Vous pouvez ici utiliser une instruction switch , qui prend la variable à vérifier et une liste de valeurs, comme différents cas :
+                </p>
+                <p>
+                    <code>
+                        switch (firstUser.accountLevel) {
+                            <br>
+                            case 'normal':
+                            <br>
+                                  console.log('You have a normal account!');
+                                  <br>
+                            
+                            break;
+                            <br>
+                            case 'premium':
+                            <br>
+                                  console.log('You have a premium account!');
+                                  <br>
+                            
+                            break;
+                            <br>
+                            case 'mega-premium':
+                            <br>
+                                  console.log('You have a mega premium account!');
+                                  <br>
+                            break;
+                            <br>
+                            
+                            default:
+                            <br>
+                                  console.log('Unknown account type!');
+                                  <br>
+                            }
+                            <br>
+                    </code>
+                </p>
+                <p>
+                    Après le code à exécuter dans chaque instruction case , ajoutez l'instruction break. Si vous ne le faites pas, JavaScript continuera l'exécution des cas suivants (en cascade) jusqu'à rencontrer une instruction break ou la fin de l'instruction switch. Comme vous pouvez le voir dans l'exemple, vous pouvez aussi ajouter un cas default qui ne sera exécuté que si la variable que vous vérifiez ne correspond à aucune des valeurs répertoriées.
+                </p>
+                <p>
+                    Le switch peut servir dans différents cas mais surtout rendre plus facile à lire l'enchaînement de condition if/else.
+                </p>
+                <p>Par exemple voici comment on aurait écrit l’exemple précédent avec des if/else :</p>
+                <p>
+                    <code>
+                        if (firstUser.accountLevel === 'normal' ) {
+                            <br>
+                            console.log('You have a normal account!');
+                            <br>
+                            } else if (firstUser.accountLevel === 'premium' ) {
+                            <br>
+                            console.log('You have a premium account!');
+                            <br>
+                            } else if (firstUser.accountLevel === 'mega-premium' ) {
+                            <br>
+                            console.log('You have a mega premium account!');
+                            <br>
+                            }else {
+                            <br>
+                            console.log('Unknown account type!');
+                            <br>
+                            }
+                    </code>
+                </p>
             </div>
             <!-- Fin col -->
         </section>
+        <!-- Fin row -->
+
+        <div class="row p-3 d-flex justify-content-center bg-warning">
+            <div class="col-12 col-md-10">
+                <h2 class="text-center  fw-bold mb-3">Conclusion</h2>
+                <p>Dans ce chapitre, on a apprit :</p>
+                <ul>
+                    <li>le fonctionnement des instructions if / else ;</li>
+                    <li>
+                        les différents types de conditions pouvant être utilisés pour les instructions if/else ;
+                    </li>
+                    <li>à regrouper les différentes conditions avec des opérateurs logiques ;</li>
+                    <li>
+                        à exploré la portée des variables, et les conséquences qu'elle a sur la structure du code ;
+                    </li>
+                    <li>l'instruction switch  pour comparaison à une liste de valeurs attendues.</li>
+                </ul>
+                <p>
+                    Dans le chapitre suivant, nous allons nous intéresser à la répétition de tâches avec des boucles..
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
         <!-- Fin row -->
     </div>
     <!-- Fin container -->

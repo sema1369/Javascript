@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.1.3/css/bootstrap.css">
+    <title>JavaScript - If / Else / Switch</title>
+</head>
+
+<body>
+    <!-- ======================================== Titre de la page ======================================= -->
+    <div class="container-fluid bg-light text-center text-danger">
+        <h1 class="display-4">Javascrpit - Les boucles</h1>
+        <p class="lead">Les boucles for & whiles</p>
+    </div>
+    <!-- Fin container-fluid -->
+    
+    <!-- ======================================== Contenu principal ======================================= -->
+    <div class="container">
+        <section class="row mt-4">
+            <h2>Introduction</h2>
+            <div class="col-12 col-md-12">
+                <p>
+                    En programmation, il y a des ensembles d'instructions à répéter plusieurs fois. Parfois, vous connaîtrez à l'avance le nombre de répétitions, d'autres fois non. Il est aussi possible que le nombre de fois n'importe pas, et que vous souhaitiez répéter le code jusqu'à atteindre une certaine condition. Pour tous ces cas, nous utiliserons des boucles
+                </p>
+                <p>
+                    Le fonctionnement général des boucles est toujours le même : on pose une condition qui sera généralement liée à la valeur d'une variable et on exécute le code de la boucle « en  boucle » tant que la condition est vérifiée.
+                    <br>
+                    Pour éviter de rester bloqué à l'infini dans une boucle, vous pouvez donc déjà noter qu'il  faudra que la condition donnée soit fausse à un moment donné (pour pouvoir sortir de la boucle).
+                    <br>
+                    Pour que notre condition devienne fausse à un moment, on pourra par exemple incrémenter ou décrémenter la valeur de notre variable à chaque nouveau passage dans la boucle (ou modifier la valeur de notre variable selon un certain schéma).
+                </p>
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <p>
+                    Supposons que vous ayez à faire embarquer 10 passagers, et que pour l'instant vous n'accordiez pas d'importance à l'ordre de leur embarquement. Utilisez une boucle for pour les embarquer un par un jusqu'à atteindre 10 :
+                </p>
+                <p>
+                    Pour cette boucle for  , créez une variable d'indice i  qui sert de compteur pour le nombre d'exécutions de la boucle. C'est pour cette raison qu'elle démarrera à zéro, car on n'a pas encore parcouru la boucle.
+                </p>
+                <p>
+                    Exemple :
+                    <br> 
+                    <code>
+                        const numberOfPassengers = 10;
+                        <br>
+                        for (let i = 0; i &lsaquo; numberOfPassengers; i++) {
+                        <br>
+                        console.log("Passager embarqué !");
+                        <br>
+                        }
+                    </code>
+                </p>
+                <p>
+                    La deuxième commande dans les parenthèses   for  est la condition de poursuite de la boucle : dès qu'elle s'évalue comme   false  , on quitte la boucle. Dans ce cas, vous souhaitez l'exécuter autant de fois qu'il y a de passagers, donc quand l'indice  i  atteint 10 (après 10 boucles), vous souhaitez l'arrêter, car il n'y a plus de passager.
+                </p>
+                <p>
+                    La troisième commande demande à la boucle for d'incrémenter i (ajouter 1) à chaque exécution. C'est ce qui permet de suivre le nombre d'exécutions de la boucle.
+                </p>
+            </div>
+        </div>
+
+        <section class="row text-center">
+            <div class="col-12 col-md-12">
+                <h2>Opérateurs d'incrémentation & de décrémentation</h2>
+                <table class="table table-striped table-info table-hover border">
+                    <thead>
+                        <tr>
+                            <td>Exemple</td>
+                            <td>Résultat</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>++x</code></td>
+                            <td>Pré-incrémentation : incrémente la valeur contenue dans la variable x, puis retourne la valeur incrémentée</td>
+                        </tr>
+                        <tr>
+                            <td><code>x++</code></td>
+                            <td>Post-incrémentation : retourne la valeur contenue dans x avant incrémentation, puis incrémente la valeur de $x</td>
+                        </tr>
+                        <tr>
+                            <td><code>--x</code></td>
+                            <td>Pré-décrémentation : décrémente la valeur contenue dans la
+                                variable x, puis retourne la valeur décrémentée</td>
+                        </tr>
+                        <tr>
+                            <td><code>x--</code></td>
+                            <td>Post-décrémentation : retourne la valeur contenue dans x avant décrémentation, puis décrémente la valeur de $x</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- Fin table -->
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+        
+        <section class="row">
+            <h5>Exemple :</h5>
+            <div class="col-12 col-md-12">
+                <p id="p1"></p>
+                
+                <p id="p2"></p>
+                
+                <p id="p3"></p>
+                    
+                <p id="p4"></p>   
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+
+        <section class="row text-center border bg-light mb-3 p-3">
+            <h2>La boucle While (tant que)</h2> 
+            <p>
+                La boucle while (tant que), en francais, va nous permettre de répéter une série d'instructions tant qu'une condition donnée est vrai, c'est-à-dire tant que la condition de sortie n'est pas vérifiée.
+            </p>
+            <div class="col-12 col-md-6">
+                <p id="while1"></p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-6">
+                <p id="while2"></p>
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <p>
+                    Autres exemple :
+                    <br>
+                    <code>
+                        let seatsLeft = 10;
+                        <br>
+                        let passengersStillToBoard = 8;
+                        <br>
+                        let passengersBoarded = 0;
+                        <br>
+
+                        while (seatsLeft > 0 && passengersStillToBoard > 0) {
+                        <br>
+                            passengersBoarded++; // un passager embarque
+                            <br>
+                            passengersStillToBoard--; // donc il y a un passager de moins à embarquer
+                            <br>
+                            seatsLeft--; // et un siège de moins
+                            <br>
+                        }
+                        <br>
+                        console.log(passengersBoarded); // imprime 8, car il y a 8 passagers pour 10 sièges
+                    </code>
+                </p>
+                <p>
+                    Cette boucle while poursuit son exécution jusqu'à ce que l'un des nombres seatsLeft  et   passengersStillToBoard  atteigne zéro, et à ce point elle se termine.
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+        <hr>
+
+        <section class="row">
+            <h2>Travaillez sur des tableaux : for… of et for… in</h2>
+            <p>
+                Dans beaucoup de cas, vous aurez un tableau et devrez le parcourir, pour faire quelque chose sur chaque élément. Il peut s'agir de mettre à jour les prix sur un menu, de traiter les données d'une base de données, ou d'embarquer des passagers dans l'ordre.
+            </p>
+            <div class="col-12 col-md-12">
+                <h5>a. La boucle for… in</h5>
+                <p>
+                    La boucle for… in est très comparable à l'exemple de boucle for normale, mais elle est plus facile à lire, et effectue tout le travail d'itération pour vous :
+                </p>
+                <p>
+                    exemple :
+                    <br> 
+                    <code>
+                        const passengers = [
+                        <br>
+                        "Will Alexander",
+                        <br>
+                        "Sarah Kate'",
+                        <br>
+                        "Audrey Simon",
+                        <br>
+                        "Tao Perkington"
+                        <br>
+                    ]
+                    <br>
+
+                    for (let i in passengers) {
+                    <br>
+                    console.log("Embarquement du passager " + passengers[i]);
+                    <br>
+                    }
+                    </code>
+                </p>
+                <p>
+                    Comme dans l'exemple précédent,   i  démarre automatiquement à zéro, et s'incrémente à chaque boucle. Vous imprimez donc   passengers[0]  , puis  passengers[1]  , puis   passengers[2]  , etc., jusqu'à terminer l'itération sur tous les passagers. Vous pouvez bien sûr imprimer chaque élément sur la console, car chacun est une chaîne contenant le nom du passager.
+                </p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-12">
+                <h5>b. La boucle for… of</h5>
+                <p>
+                    Pour les cas où l'indice précis d'un élément n'est pas nécessaire pendant l'itération, vous pouvez utiliser une boucle for… of;
+                </p>
+                <p>
+                    En reprenant l'exemple précédent et en utilisant à la place une boucle for… of, vous obtenez :
+                </p>
+                <p>
+                    exemple :
+                    <br> 
+                    <code>
+                        const passengers = [
+                        <br>
+                        "Will Alexander",
+                        <br>
+                        "Sarah Kate",
+                        <br>
+                        "Audrey Simon",
+                        <br>
+                        "Tao Perkington"
+                        <br>
+                    ]
+                    <br>
+
+                    for (let passenger of passengers) {
+                    <br>
+                    console.log("Embarquement du passager" + passenger);
+                    <br>
+                    }
+                    </code>
+                </p>
+                <p>
+                    Comme dans l'exemple précédent,   i  démarre automatiquement à zéro, et s'incrémente à chaque boucle. Vous imprimez donc   passengers[0]  , puis  passengers[1]  , puis   passengers[2]  , etc., jusqu'à terminer l'itération sur tous les passagers. Vous pouvez bien sûr imprimer chaque élément sur la console, car chacun est une chaîne contenant le nom du passager.
+                </p>
+                <p>
+                    Ceci produit exactement le même résultat, mais de façon plus lisible, car vous n'avez pas à vous inquiéter des indices et des tableaux : vous recevez simplement chaque élément dans l'ordre. C'est encore plus utile si le tableau est un peu plus complexe et contient par exemple des objets :
+                </p>
+                <p>
+                    Exemple : 
+                    <code>
+                        const passengers = [
+                        <br>
+                            {
+                            <br>
+                                name: "Will Alexander",
+                                <br>
+                                ticketNumber: 209542
+                                <br>
+                            },
+                            <br>
+
+                            {
+                            <br>
+                                name: "Sarah Kate",
+                                <br>
+                                ticketNumber: 169336
+                                <br>
+                            },
+                            <br>
+
+                            { 
+                            <br>
+                                name: "Audrey Simon", 
+                                <br>
+                                ticketNumber: 779042 
+                                <br>
+                            },
+                            <br>
+                            { 
+                            <br>
+                                name: "Tao Perkington", 
+                                <br>
+                                ticketNumber: 703911 
+                                <br>
+                            } 
+                            <br>
+                            ]
+                            <br>
+
+                            for (let passenger of passengers) { 
+                            <br>
+                            console.log('Embarquement du passager ' + passenger.name + ' avec le ticket numéro ' + passenger.ticketNumber); 
+                            <br>
+                            }
+                    </code>
+                </p>
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+        
+
+        <div class="row p-3 d-flex justify-content-center bg-warning">
+            <div class="col-12 col-md-10">
+                <h2 class="text-center  fw-bold mb-3">Conclusion</h2>
+                <p>Dans ce chapitre, on a apprit :</p>
+                <ul>
+                    <li>la boucle   for  , pour un nombre d'itérations fixe ;</li>
+                    <li>la boucle   while  , quand le nombre d'itérations nécessaires est inconnu.</li>
+                </ul>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container -->
+
+    <!-- ==================================== Mes fichiers scripts ======================================= -->
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.1.3/js/bootstrap.js"></script>
+
+    <!-- Fichier script JS en externe -->
+    <script src="js/7_les_boucles.js"></script>
+</body>
+
+</html>
