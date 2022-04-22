@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/bootstrap-5.1.3/css/bootstrap.css">
+    <title>JavaScript - Les Fonctions</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- ==================================== Titre de la page ======================================= -->
+        <div class="row">
+            <div class="col-12 col-md-12 text-center text-danger p-3 bg-light">
+                <h1> Javascript - Les fonctions </h1>
+                <p class="lead">Les fonctions en JS sont incontournables</p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <!-- =================================== Contenu Principal ======================================= -->
+        <div class="row mt-4">
+            <div class="col-12 col-md-12">
+                <h2>1- Les fonctions prédéfinies</h2>
+                <p>
+                    Une fonction est un bloc de code nommé et réutilisable, et dont le but est d'effectuer une tâche précise ; les fonctions possèdent de nombreux atouts.
+                </p>
+                <p>
+                    Il existe des fonction "prédéfinies" telle que <code>random()</code> qui est une fonction "mathématique" qui appartient à l'objet Math, <code>replace()</code> une fonction "string" qui appartient à l'objet String.
+                </p>
+            </div>
+            <!-- Fin col -->
+            
+            <div class="col-12 col-md-12">
+                <h4>Exemples</h4>
+                <p id="p1"></p>
+                <p>
+                    Le nom d'une fonction est suivi d'un couple de parenthèses qui contiennent les plus souvent des arguments ex. <code>replace()</code> le premier argument de replace() est la chaîne de caractères que l'on cherche et le second est celle qui va la remplacer.
+                </p>
+                <p id="p2"></p>
+                <h4>Autre exemple :</h4>
+                <p>
+                    <br> 
+                    <code>
+                        // On définit la fonction
+                        <br>
+                        function afficherDeuxValeurs(valeur1, valeur2) {
+                        <br>
+                        console.log('Première valeur:' + valeur1);
+                        <br>
+                        console.log('Deuxième valeur:' + valeur2);
+                        <br>
+                        }
+                        <br>
+                    </code>
+                </p>
+                <p>
+                    <code>
+                        // On exécute la fonction
+                        <br>
+                        afficherDeuxValeurs(12, 'Bonjour');
+                        <br>
+    
+                        // On obtient dans la console
+                        <br>
+                        // > Première valeur:12
+                        <br>
+                        // > Deuxième valeur:Bonjour
+                        <br>
+                    </code>
+                </p>
+                <p>
+                    Beaucoup de fonctions ont besoin de variables pour effectuer leur travail. Quand vous créez ou déclarez une fonction, vous indiquez la liste des variables dont elle a besoin pour effectuer son travail : vous définissez les paramètres de la fonction.
+                    <br>
+                    Ensuite, à l'appel de la fonction, vous lui attribuez des valeurs pour ses paramètres. Les valeurs sont les arguments d'appel. Enfin, votre fonction peut vous donner un résultat : une valeur de retour.
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <h2 class="p-3">2- Les fonctions personnalisées</h2>
+        <section class="row bg-light p-3 border text-center d-flex justify-content-center">
+            <div class="col-12 col-md-2">
+                <h4><code>Multiplication</code></h4>
+                <p>
+                    Ce premier exemple de création de fonction a pour but de nous montrer que l'on peut exécuter une fonction à l'interieur d'une autre fonction <code>randomFois100()</code>
+                </p>
+                <p id="p3"></p>
+
+                <p id="p4"></p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-2">
+                <h4><code>Soustraction</code></h4>
+                <p id="p5"></p>
+            </div>
+            <!-- Fin col -->
+            
+            <div class="col-12 col-md-2">
+                <h4><code>Addition</code></h4>
+                <p id="p6"></p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-3">
+                <h4><code>division</code></h4>
+                <p id="p7"></p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-2">
+                <h4><code>modulo</code></h4>
+                <p id="p8"></p>
+            </div>
+            <!-- Fin col -->
+        </section>
+        <!-- Fin row -->
+
+        <div class="row p-3">
+            <div class="col-12 col-md-12">
+                <h2>Récapitulatif sur les fonctions</h2>
+                <p>
+                    Les fonctions sont des blocs de code nommés et réutilisables et dont le but est d’effectuer une tâche précise ;
+                </p>
+                <ul>
+                    <li>
+                        Il existe 2 types de fonctions en JS : les fonctions natives ou prédéfinies (ou des méthodes) qu'on n'aura qu'à appeler et les fonctions personnalisées qu'on va créer.
+                    </li>
+                    <li>
+                        Pour exécuter le code d'une fonction il faut l'appeler. Pour cela, il suffit d'écrire son nom suivi de parenthèses en passant éventuellement des arguments dans les parenthèses.
+                    </li>
+                    <li>On crée une fonction personnalisée grâce au mot-clef "function" :</li>
+                    <li>
+                        Si une fonction a besoin qu'on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition.
+                    </li>
+                    <li>
+                        Lors de son appel, on lui passera des arguments qui prendront la place des paramètres.
+                    </li>
+                </ul>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container-fluid -->
+
+    <!-- ==================================== Mes fichiers scripts ======================================= -->
+
+    <!-- Bootstrap JS -->
+    <script src="bootstrap-5.1.3/js/bootstrap.js"></script>
+
+    <!-- Fichier script JS en externe -->
+    <script src="js/9_fonctions.js"></script>
+</body>
+</html>
