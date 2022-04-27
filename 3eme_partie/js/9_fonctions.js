@@ -1,7 +1,8 @@
 // FICHIER JS EXTERNE - LES FONCTIONS - SEMA
 
 console.log(Math.random());
-document.getElementById('p1').innerHTML = Math.random(); /* ici on exécute le code "caché" derrière la fonction, on appelle la fonction ou on l'invoque */
+document.getElementById('p1').innerHTML = Math.random(); 
+/* ici on exécute le code "caché" derrière la fonction, on appelle la fonction ou on l'invoque */
 
 let discours1 = 'Bonjour, je suis Donald Trump et j\'ai gagné';
 console.log(discours1); 
@@ -26,7 +27,8 @@ document.getElementById('p3').innerHTML = randomfois100();
 
 function multiplier(nbr1, nbr2){ /* Mot clef + nom de la fonction() */
     // return(nbr1 * nbr2); /* La fonction écrite simplement */
-    return('La multiplication : ' + nbr1 + ' x ' + nbr2 + ' = ' + (nbr1 * nbr2)); /* Code qui renvoie une sting avec le calcul */
+    return('La multiplication : ' + nbr1 + ' x ' + nbr2 + ' = ' + (nbr1 * nbr2)); 
+    /* Code qui renvoie une string avec le calcul */
 }
 console.log(multiplier(3,9));
 document.getElementById('p4').innerHTML = multiplier(3,9);
