@@ -20,13 +20,144 @@
     <script src="https://kit.fontawesome.com/08c181196a.js" crossorigin="anonymous"></script>
     <!-- Kit Fontawesome icon  -->
 
-    <title>JavaScript - Les constantes</title>
+    <title>JavaScript - Les types de données</title>
     <!-- Titre du document qui s'affiche dans la barre de titre du navigateur -->
 </head>
 
 <body>
-    <h1>Javascript - 3 - Les constantes</h1>
-    <h2>Bonjour tout le monde</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-12 bg-light text-center p-3 mb-3">
+                <h1>4 - Les types de données</h1>
+                <p class="lead">Les différents types de données</p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-10">
+                <h2>Les types primitif principaux en JS</h2>
+                <ol>
+                    <li><a href=""><span class="surligner">String</span></a> (chaine de caractères)</li>
+                    <li><a href=""><span class="surligner">Number</span></a> (nombre)</li>
+                    <li><a href=""><span class="surligner">Boolean</span></a> (booléen)</li>
+                    <li><a href=""><span class="surligner">Undefined</span></a> (indéfini)</li>
+                    <li><a href=""><span class="surligner">Null</span></a> (vide)</li>
+                </ol>
+                <p>Pour connaitre les types de données on utilise la fonction <code>typeof()</code></p>
+                <hr>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h6 class="fw-bold">String (Chaîne de caractère)</h6>
+                <p>
+                    Les chaînes de caractères (chaînes, ou strings, en anglais) sont la façon d'enregistrer du texte dans des variables JavaScript. On peut enregistrer dans une variable de type string n'importe quelle chaîne de caractères, allant d'une seule lettre à un très grand nombre de lettres (plus de 134 millions, même dans des navigateurs anciens).
+                    <br>
+                    Les variables de type string sont encadrées par des guillemets simples <code>'...'</code> ou doubles <code>"..."</code> :   
+                    <br>
+                    Exemple : <br> 
+                    <code>let nom = 'Alexander';</code> <br>
+                    <code>let prenom = "Will";</code> <br>
+                    Utiliser les guillemets simples sont une bonne pratique pour une string.
+                </p>
+                <p class="text-danger">
+                    Faites attention cependant à un point : <br>
+                    Si votre chaîne contient un caractère qui est le même que le délimiteur de chaîne choisi, il faudra neutraliser ce caractère en l’échappant au moyen d’un antislash ou changer de délimiteur.
+                </p>
+                <p>
+                    Les chaînes peuvent aussi être concaténées (ajoutées à la fin l'une de l'autre) par l'opérateur ' + ' : <br>
+                    Exemple : <code>let nomComplet = prenom + " " + nom; // résultat: "Will Alexander".</code> 
+                </p>
+                <p>
+                    Il est possible depuis quelques années d’utiliser une nouvelle écriture qui simplifie la concaténation des variables et des chaînes de caractère : 
+                    <span class="fw-bold">la string interpolation.</span> <br>
+                    Pour créer une string interpolation on écrit du texte encadrée par le signe <code>`</code> et si on veut injecter une variable dans ce code on utilise l’expression 
+                    <code>${maVariable}</code>. <br>
+                    Exemple : <br>
+                    <code>const myName = `Alexander`;</code> <br>
+                    <code>const salutation = `Bienvenue sur mon site ${myName}!`;</code> <br>
+                    <code>console.log(salutation); // résultat: “Bienvenue sur mon site Alexander!”</code> 
+                </p>
+                <hr>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h6 class="fw-bold">Number (Nombre)</h6>
+                <p>
+                    Les variables en javascript vont également pouvoir stocker des nombres. Des nombres entiers (1, 2, 3, etc.) positifs ou négatifs ou à virgule, décimaux (1,4 ; 67,34 ; etc. <br>
+                    En programmation, les nombres entiers sont aussi appelés entiers ou integers ; les nombres avec des chiffres après la virgule sont aussi appelés nombres en virgule flottante ou floating-point. <br>
+                    Exemple : <br>
+                    <code>let calculInteger = 1 + 2; // résultat : 3</code> <br>
+                    <code>
+                        let calculFloatingPoint = 0.1 + 0.2; // résultat : 0.3, résultat réelle : 0.30000000000000004
+                    </code> 
+                </p>
+                <p>
+                    Chaque fois que c'est possible, utilisez plutôt des calculs entiers (pour le calcul de prix, vous pouvez par exemple calculer en centimes, et non pas en euros ou en dollars).
+                </p>
+                <hr>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h6 class="fw-bold">Boolean (Booléen)</h6>
+                <p>
+                    Ce type de données sera utile pour verifier si un test est vrai ou faux.
+                    Un booléen, en algèbre est une valeur binaire (soit 0, soit 1). <br> 
+                    En informatique, le type booléen est un type qui ne contient que deux valeurs : les valeurs true (vrai) et false (faux).
+                </p>
+                <p>
+                    Il s'utilise dans toutes sortes de cas : pour indiquer si un utilisateur est connecté ou non, si une case est cochée ou non, ou si un ensemble de conditions particulières est réuni. <br> 
+                    Exemple : <br>
+                    <code>let utilisateurEstConnecte = true;</code> <br>
+                    <code>let utilisateurEstAdmin = false;</code>
+                </p>
+                <hr>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h6 class="fw-bold">Undefined (Indéfini)</h6>
+                <p>
+                    Si on déclare une variable sans lui attribuer de valeur, alors son type sera <code>undefined</code>.
+                </p>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h6 class="fw-bold">Null (Vide)</h6>
+                <p>Null est un type un peu particulier. <code>Null</code> = absence de valeur non saisie.</p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-12 bg-warning p-3 mt-5">
+                <h2 class="text-center">Conclusion</h2>
+                <p>
+                    Nous avons apprit les principaux types de données primitifs en JavaScript. On connait désormais :
+                </p>
+                <ul>
+                    <li>String (Chaîne de caractères) ;</li>
+                    <li>Number (Nombre) ;</li>
+                    <li>Boolean (Booleen, valeur logique true/false) ;</li>
+                    <li>Undefined (Indéfini)</li>
+                    <li>Null (Vide)</li>
+                </ul>
+                <p>
+                    Dans le chapitre suivant, nous verrons un type très utile : les objets.
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container-fluid -->
+    
 
     <!-- ======================================== FICHIER JS ======================================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
