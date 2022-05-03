@@ -18,7 +18,6 @@ console.log(personne);
 // Les accolades '{}' indiquent que ma variable devient un objet et quelles contiennent des propriétés (paires de clés: valeurs)
 // Chaque clé est une chaîne et les valeurs peuvent être de tout types de données (string, number, boolean etc..)
 
-
 /* ============================== B - TRAVAILLER L'OBJET AVEC DOT NOTATION ============================= */
 
 personne.nom;

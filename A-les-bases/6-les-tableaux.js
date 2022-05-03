@@ -8,7 +8,7 @@ let couleurSelectionne = [
 ];
 console.log(couleurSelectionne);
 // let = Je declare ma variable
-// couleurSelectionne = Le nom de mon array
+// couleurSelectionne = Le nom de ma variable 
 // Les crochets '[]' contiennent les éléments de mon array
 
 /* ============================== B - ACCEDER AU TABLEAU (ARRAY) PAR SON INDICE ============================= */

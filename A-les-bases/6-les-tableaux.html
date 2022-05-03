@@ -25,8 +25,89 @@
 </head>
 
 <body>
-    <h1>Javascript - 6 - Les tableaux</h1>
-    <h2>Bonjour tout le monde</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-12 bg-light text-center p-3 mb-5">
+                <h1>6 - Les tableaux (arrays)</h1>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-10">
+                <h2>Utiliser un tableau pour enregistrer une liste ordonnée d'éléments</h2>
+                <p>
+                    a) Pour créer un tableau vide et l'enregistrer dans une variable, utilisez une paire de crochets : <code>let invites = [];</code>
+                </p>
+                <p>
+                    b) Vous pouvez aussi créer un tableau rempli en plaçant les éléments voulus à l'intérieur de ces crochets : <br> 
+                    <code>let invites = ["Kemi seba", "Nathalie yamb", "Hash carter"];</code>
+                </p>
+                <p>
+                    c) Vous pouvez ensuite accéder aux éléments de ce tableau par leur indice : 
+                    <span class="bg-warning">N'oubliez pas de démarrer à l'indice  0  !</span><br> 
+                    <code>
+                        let premierinvites = invites[0]; // résultat : "Kemi seba" <br>
+                        let secondinvites = invites[2]; // résultat : "Hash carter" <br>
+                        let invitesNonDefini = invites[12] // résultat : undefined
+                    </code>
+                </p>
+                <hr>
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h2>Travailler sur les tableaux</h2>
+                <h6 class="fw-bold">
+                    d) Le comptage d'éléments dans un tableau avec la propriété <code>length</code>
+                </h6>
+                <p>
+                    La propriété length d'un tableau indique le nombre d'éléments qu'il contient : <br> 
+                    <code>let invites = ["Nelson Mandela", "Malcom X", "Frantz Fanon"];</code> <br>
+                    <code>let nombreInvites = invites.length; // résultat : 3</code> <br>
+                    Utilisez la notation dot pour accéder à la propriété length de votre tableau. Ce n'est peut-être pas très utile dans cet exemple (parce que nous savons combien nous avons mis d'invités dans le tableau !), mais dans beaucoup de cas, vous ne saurez pas à l'avance combien il y a d'éléments dans un tableau.
+                </p>
+                <h6 class="fw-bold">e) L'ajout d'éléments dans un tableau avec la méthode <code>push</code></h6>
+                <p>
+                    Pour ajouter un élément à la fin d'un tableau, utilisez la méthode push : <br> 
+                    <code>
+                        invites.push("Marcus Garvey"); // résultat : ajoute "Marcus Garvey" à la fin du tableau invites. 
+                    </code>
+                </p>
+                <h6 class="fw-bold">
+                    f) L'ajout d'éléments dans un tableau avec la méthode <code>unshift</code>
+                </h6>
+                <p>
+                    Pour ajouter un élément au début d'un tableau, utilisez la méthode unshift : <br> 
+                    <code>
+                        invites.unshift("Jerry Rowlings"); // résultat : ajoute "Jerry Rowlings" au début du tableau invites.
+                    </code> 
+                </p>
+                <h6 class="fw-bold">
+                    g) Suppression du dernier élément d'un tableau avec la méthode <code>pop</code>
+                </h6>
+                <p>
+                    Pour supprimer le dernier élément d'un tableau, utilisez la méthode pop , sans passer aucun argument : <br>
+                    <code>invites.pop(); // résultat : supprime le dernier élément du tableau</code>   
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row  -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-12 bg-warning p-3 mt-5">
+                <h2 class="text-center">Conclusion</h2>
+                <p>
+                    On sait désormais : Créer des tableaux, les remplir, et les manipuler avec certains outils de base.
+                </p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container-fluid -->
 
     <!-- ======================================== FICHIER JS ======================================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

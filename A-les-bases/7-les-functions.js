@@ -2,6 +2,7 @@
 
 /* ======================================== A - DECLARATION D'UNE FUNCTION ======================================= */
 
+// Function qui sert à réaliser une tâche précise.
 function saluer() {
     console.log('Bonjour tout le monde');
 }

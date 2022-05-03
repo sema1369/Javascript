@@ -25,8 +25,90 @@
 </head>
 
 <body>
-    <h1>Javascript - 7 - Les functions</h1>
-    <h2>Bonjour tout le monde</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-12 bg-light text-center p-3 mb-5">
+                <h1>7 - Les functions</h1>
+                <p class="lead">Les functions en JS sont incontournables</p>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-10">
+                <h2>Qu'est-ce qu'une fonction ?</h2>
+                <p>
+                    Une fonction est un bloc de code nommé et réutilisable, et dont le but est d'effectuer une tâche précise ; les fonctions possèdent de nombreux atouts.
+                </p>
+                <ul>
+                    <li>
+                        Il existe 2 types de fonctions en JS : les fonctions natives ou prédéfinies qu'on n'aura qu'à appeler. Et les fonctions personnalisées qu'on va créer.
+                    </li>
+                    <li>On crée une fonction personnalisée grâce au mot-clef <code>function</code> :</li>
+                    <li>
+                        Pour exécuter le code d'une fonction il faut l'appeler. Pour cela, il suffit d'écrire son nom suivi de parenthèses en passant éventuellement des arguments dans les parenthèses.
+                    </li>
+                    <li>
+                        Si une fonction a besoin qu'on lui passe des valeurs pour fonctionner, alors on définira des paramètres lors de sa définition.
+                    </li>
+                    <li>
+                        Lors de son appel, on lui passera des arguments qui prendront la place des paramètres.
+                    </li>
+                </ul>
+                <hr>
+                
+            </div>
+            <!-- Fin col -->
+
+            <div class="col-12 col-md-10">
+                <h2>Déclaration d'une fonction</h2>
+                <p>On "déclare" une fonction avec le mot-clef : <code>function</code></p>
+                <p>
+                    Exemple : <br>
+                    <code>
+                        // On déclare la fonction <br>
+                        function afficheDeuxValeurs(valeur1, valeur2) { <br>
+                        console.log('Première valeur:' + valeur1); <br>
+                        console.log('Deuxième valeur:' + valeur2); <br>
+                        }<br>
+                    </code> <br>
+                    <code>
+                        // On exécute la fonction <br>
+                        afficheDeuxValeurs(12, 'Bonjour');<br>
+                    </code> <br>
+                    <code>
+                        // résultat : On obtient dans la console.log<br>
+                        // Première valeur : 12 <br>
+                        // Deuxième valeur : Bonjour <br>
+                    </code>
+                </p>
+                <p>
+                    Beaucoup de fonctions ont besoin de variables pour effectuer leur travail. Quand vous créez ou déclarez une fonction, vous indiquez la liste des variables dont elle a besoin pour effectuer son travail : vous définissez les paramètres de la fonction. <br>
+                    Ensuite, à l'appel de la fonction, vous lui attribuez des valeurs pour ses paramètres. Les valeurs sont les arguments d'appel. Enfin, votre fonction peut vous donner un résultat : une valeur de retour.
+                </p>              
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+
+        <div class="row d-flex justify-content-center">
+            <div class="col-12 col-md-12 bg-warning p-3 mt-5">
+                <h2 class="text-center">Conclusion</h2>
+                <p>Dans ce chapitre, on a appris :</p>
+                <ul>
+                    <li>ce qu'est une fonction, comment en déclarer une et comment l'appeler;</li>
+                    <li>ce que sont les paramètres, les arguments et les valeurs de retour;</li>
+                    <li>
+                        à manipuler, ajouter plusieurs paramêtre et calculer les valeurs d'une fonction;
+                    </li>
+                </ul>
+            </div>
+            <!-- Fin col -->
+        </div>
+        <!-- Fin row -->
+    </div>
+    <!-- Fin container-fluid -->
 
     <!-- ======================================== FICHIER JS ======================================= -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

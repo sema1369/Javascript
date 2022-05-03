@@ -40,45 +40,86 @@
                 <p>
                     Un objet est un ensemble cohérent de propriétés et de méthodes.
                 </p>
+                <p>
+                    Les objets en JavaScript sont écrits en JSON (JavaScript Object Notation). <br> 
+                    Ce sont des séries de paires clés-valeurs séparées par des virgules, entre des accolades. Les objets peuvent être enregistrés dans une variable : <br>
+                    <code>
+                        let personne = { <br>
+                            prenom: 'Sema', <br>
+                            nom: 'Stg', <br>
+                            age: 27 <br>
+                        }; <br>
+                        console.log(personne);
+                    </code>
+                </p>
+                <p>
+                    Chaque clé est une chaîne (prenom, nom, age...), et les valeurs associées peuvent avoir tout type de données (chaîne de caractère, nombre, etc.). <br>
+                    Construire des objets présente un avantage essentiel : cela permet de regrouper les attributs d'une chose unique à un même emplacement, que ce soit un livre, un profil d'utilisateur ou la configuration d'une application, par exemple.
+                </p>
+                <hr>
             </div>
             <!-- Fin col -->
 
             <div class="col-12 col-md-10">
-                <h2>Règles de déclaration d'une variable</h2>
-                <p>On "déclare" une variable avec le mot-clef : <code>let</code></p>
-                <ul>
-                    <li>
-                        Le nom d'une variable doit obligatoirement commencer par une lettre ou un underscore _
-                    </li>
-                    <li>
-                        Le nom d'une variable ne doit contenir que des lettres, des chiffres et des underscores _
-                    </li>
-                    <li>Le nom d'une variable doit avoir une signification précise.</li>
-                    <li>Il n'y a pas d'espace dans le nom d'une variable.</li>
-                </ul>               
+                <h2>Comment accéder aux données d'un objet avec dot notation ?</h2>
+                <p>
+                    Maintenant que vous savez comment créer un objet en JavaScript, voyons comment accéder aux données dans un objet avec la notation pointée (dot notation), expliquée ci-dessous. <br>
+                    Une fois qu'un objet est enregistré dans une variable, vous pouvez accéder à ses données comme dans l'exemple ci-dessous : <br>
+                    <code>
+                        let monLivre = {
+                        <br>
+                            titre: "L'Histoire de Tao", <br>
+                            auteur: "Will Alexander", <br>
+                            nombreDePages: 250, <br>
+                            estDisponible: true <br>
+                        };
+                    </code>
+                </p>
+                <p>
+                    <code>let titreDuLivre = monLivre.titre; // résultat : "L'Histoire de Tao"</code> <br>
+                    <code>let pagesDulivre = monLivre.nombreDePages // résultat : 250</code> 
+                </p>
+                <p>
+                    Pour cela, utilisez le nom de la variable qui contient l'objet, ensuite placez un point 
+                    ' . ', puis le nom de la clé dont vous souhaitez récupérer la valeur.
+                </p>  
+                <hr>            
             </div>
             <!-- Fin col -->
 
             <div class="col-12 col-md-10">
-                <h2>Initialiser une variable</h2>
+                <h2>La notation bracket (bracket notation)</h2>
                 <p>
-                    Lorsque l'on assigne une valeur à une variable vide on dit que l'on stocke une valeur ou qu'on initialise une variable.
+                    Pour accéder à un sous élément vous pouvez utiliser les brackets avec la valeur du sous élément. <br>
+                    Exemple : <br>
+                    <code>
+                        let monLivre = { <br>
+                            titre: "L'Histoire de Tao", <br>
+                            auteur: "Will Alexander", <br>
+                            nombreDePages: 250, <br>
+                            estDisponible: true <br>
+                            }; <br>
+                    </code>
                 </p>
-            </div> 
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-10">
-                <h2>Modifier la valeur d'une variable</h2>
                 <p>
-                    La façon la plus simple de modifier la valeur d'une variable est simplement de la réaffecter.
+                    <code>let titreDuLivre = monLivre["titre"]; // résultat : "L'Histoire de Tao"</code> <br>
+                    <code>pagesDulivre = monLivre["nombreDePages"]; // résultat : 250</code> 
                 </p>
-            </div> 
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-10">
-                <h2>La portée d'une variable</h2>
                 <p>
-                    La portée d'une variable désigne l'endroit où elle va pouvoir être utilisée dans un script.
+                    L'intérêt ici est de pouvoir mettre entre bracket une variable qui contient en string le nom de la propriété que l’on souhaite atteindre. <br>
+                    Exemple : <br>
+                    <code>
+                        let monLivre = { <br>
+                            titre: "L'Histoire de Tao", <br>
+                            auteur: "Will Alexander", <br>
+                            nombreDePages: 250, <br>
+                            estDisponible: true <br>
+                            };
+                    </code>
+                </p>
+                <p>
+                    <code>let accesPropriete = "titre";</code> <br>
+                    <code>titreDuLivre = monLivre[accesPropriete]; // résultat : "L'Histoire de Tao"</code> 
                 </p>
             </div> 
             <!-- Fin col -->
