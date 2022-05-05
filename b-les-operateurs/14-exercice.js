@@ -1,4 +1,4 @@
-// 14 - ECHANGER DES VARIABLES - SEMA
+// 14 - INVERSER LES VARIABLES - SEMA
 
 let a = 'rouge';
 let b = 'bleu'; 

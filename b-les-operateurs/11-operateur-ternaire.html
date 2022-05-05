@@ -28,6 +28,7 @@
         <div class="row">
             <div class="col-12 col-md-12 bg-light text-center p-3 mb-5">
                 <h1>11 - Opérateur ternaire</h1>
+                <p class="lead">Une autre facon d'écrire des conditions...</p>
             </div>
             <!-- Fin col -->
         </div>
@@ -35,28 +36,36 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-10">
-                
+                <h2>Les structures conditionnelle ternaires</h2>
+                <p>
+                    Les ternaires sont une autre facon d'écrire nos conditions en utilisant une syntaxe basée sur l'opérateur ternaire <code>? :</code>
+                </p>
             </div>
             <!-- Fin col -->
 
             <div class="col-12 col-md-10">
-                              
+                <h2>Ecriture</h2>
+                <p>On peut écrire la condition sur une ligne. Exemple :</p>
+                <p>
+                   <code> 
+                        // Si un client a plus de 100 points : <br>
+                        // Il est un client en 'or', sinon, <br>
+                        // Il est un client en 'argent'. <br>
+                        
+                        let pointsClientUn = 110; <br>
+                        let type = pointsClientUn > 100 ? 'gold' : 'silver'; <br>
+                        console.log(type); <br>
+                        
+                        let pointsClientDeux = 90; <br>
+                        type = pointsClientDeux > 100 ? 'gold' : 'silver'; <br>
+                        console.log(type);
+                    </code>
+                </p>
+                <p>
+                    Les ternaires se présentent sous la forme suivante : 
+                    <code>test ? code à exécuter si true : code à excuter sinon</code>
+                </p>               
             </div>
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-10">
-                
-            </div> 
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-10">
-                
-            </div> 
-            <!-- Fin col -->
-
-            <div class="col-12 col-md-10">
-                
-            </div> 
             <!-- Fin col -->
         </div>
         <!-- Fin row -->

@@ -20,14 +20,15 @@
     <script src="https://kit.fontawesome.com/08c181196a.js" crossorigin="anonymous"></script>
     <!-- Kit Fontawesome icon  -->
 
-    <title>JavaScript - Précédence des opérations</title>
+    <title>JavaScript - Précédence</title>
     <!-- Titre du document qui s'affiche dans la barre de titre du navigateur -->
 </head>
 <body>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-12 bg-light text-center p-3 mb-5">
-                <h1>13 - Précédence des opérations</h1>
+                <h1>13 - Précédence</h1>
+                <p class="lead">Ordre de priorité des opérations</p>
             </div>
             <!-- Fin col -->
         </div>
@@ -35,12 +36,191 @@
 
         <div class="row d-flex justify-content-center">
             <div class="col-12 col-md-10">
-                
+                <h2>Précédence et règle de priorité des opérations</h2>
+                <p>
+                    <code>
+                        x = (2 + 3) * 4; <br>
+                        console.log(x); <br>
+                        // Le calcul commencera par la parenthèse. <br>
+                    </code>
+                </p>
+                <p>
+                    JS va d'abord traiter tel opérateur, puis tel autre. Dans cette exmple il traite d'abord ce qui est dans la parenthèse... 
+                </p>
+                <p>
+                    Cet ordre de priorité est appelé <span class="fw-bold">« précédence »</span>. <br>
+                    En plus de cela, les opérateurs vont avoir différents sens d’associativité. <br>
+                    L’associativité détermine l’ordre dans lequel des opérateurs de même précédence sont évalués et va pouvoir se faire par la droite ou par la gauche. Une associativité par la gauche signifie qu’on va commencer les opérations en partant de la gauche et vers la droite tandis qu’une associativité par la droite signifie qu’on va commencer par la droite.
+                </p>
+                <hr>
+                <p>
+                    Avant cela, voici un tableau classant les différents opérateurs vus jusqu’à présent de la plus haute (0) à la plus basse précédence (10), c’est-à-dire selon leur ordre de traitement par le JavaScript.
+                </p>
+                <p class="text-danger">
+                    L’important est de se souvenir qu’il existe une précédence et des règles d’associativité lorsqu’on utilise des opérateurs et d’aller vérifier l’ordre et le sens de traitement des opérateurs en cas de doute. <br> 
+                    Dans tous les cas, vous finirez par connaitre ce tableau à force de pratique.
+                </p>
             </div>
             <!-- Fin col -->
 
             <div class="col-12 col-md-10">
-                              
+                <table class="table table-striped table-hover table-light m-1 border shadow">
+                    <caption>Précédence</caption>
+                    <thead class="table-warning">
+                        <tr>
+                            <td>Précédence</td>
+                            <td>Nom de l'opérateur</td>
+                            <td>Symbole</td>
+                            <td>Associativité</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Groupement</td>
+                            <td>(...)</td>
+                            <td>Non applicable</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Post-incrémentation </td>
+                            <td>... ++</td>
+                            <td>Non applicable</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Post-décrémentation</td>
+                            <td>... —</td>
+                            <td>Non applicable</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>NON (logique)</td>
+                            <td>! ...</td>
+                            <td>Droite</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pré-incrémentation</td>
+                            <td>++ ...</td>
+                            <td>Droite</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Pré-décrémentation</td>
+                            <td>- ...</td>
+                            <td>Droite</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Exponentiel</td>
+                            <td>... ** ...</td>
+                            <td>Droite</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Multiplication</td>
+                            <td>... * ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Division</td>
+                            <td>... / ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Modulo</td>
+                            <td>... % ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Addition</td>
+                            <td>... + ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Soustraction</td>
+                            <td>... - ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Inférieur strict</td>
+                            <td>... &lsaquo; ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Inférieur ou égal</td>
+                            <td>... &lsaquo;= ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Supérieur stric</td>
+                            <td>... > ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Supérieur ou égal</td>
+                            <td>... >= ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Egalité (en valeur)</td>
+                            <td>... == ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Inégalité (en valeur)</td>
+                            <td>... != ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Egalité (en valeur et en type)</td>
+                            <td>... === ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Inégalité (valeur ou type)</td>
+                            <td>... !== ...</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>ET (logique)</td>
+                            <td>&&</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>OU (logique)</td>
+                            <td>||</td>
+                            <td>Gauche</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Ternaire</td>
+                            <td>... ? ... : ...</td>
+                            <td>Droite</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>Affectation (simple ou combiné)</td>
+                            <td>... = ..., ... += ..., ...-=..., etc,</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>      
             </div>
             <!-- Fin col -->
 
