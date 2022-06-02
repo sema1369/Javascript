@@ -19,4 +19,4 @@ do {
 while(while2 < 5);
 
 // Dans cet exemple le résultat affiche le bloc d'instruction qu'une seule fois d'abord puis n'incremente pas car la condition est false. 
-// Do while est utilisé peu fréquemment. 
+// Do while est peu utilisé en programmation. 
