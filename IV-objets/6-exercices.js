@@ -87,6 +87,11 @@ console.log(areSame(address4, address5));
 
 /* ======================================== EXERCICE 4 ======================================= */
 
+// Creer une objet avec toutes les propriétées à l'interieur : 
+// title, body, author, views,
+// comments qui possede 2 proprietees (author, body)
+// isLive qui est un boolean
+
 let blogPost = {
     title: 'loulou',
     body: 'bienvenue dans le monde de loulou',
@@ -99,4 +104,21 @@ let blogPost = {
     isLive: true
 };
 console.log(blogPost);
+
+/* ======================================== EXERCICE 5 ======================================= */
+
+// Faire la meme chose avec constructor function
+
+let post = new Post ('a', 'b', 'c');
+
+function Post(title, body, author) {
+    this.title = title;
+    this.body = body;
+    this.author = author; 
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false;
+};
+console.log(post);
+
 
